@@ -7,6 +7,7 @@
 //
 
 #import "LoginRegisterViewController.h"
+#import "forgetPasswordViewController.h"
 #import "AFNetworking.h"
 
 @interface LoginRegisterViewController ()
@@ -19,7 +20,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *receiveCode;
 @property (weak, nonatomic) IBOutlet UITextField *registerPassword;
 - (IBAction)sendCode:(UIButton *)sender;
+- (IBAction)close;
 
+
+- (IBAction)forgetPassword;
 @end
 
 @implementation LoginRegisterViewController
@@ -85,6 +89,11 @@
     params[@"PassWord"]=self.loginPassword.text;
     [[AFHTTPSessionManager manager] POST:@"http://bxw2442250223.my3w.com/BackStage/LoginResult" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@",responseObject);
+        NSDictionary *dict =responseObject;
+        NSString *errMsg = [dict valueForKey:@"ErrMsg"];
+        NSLog(@"%@",errMsg);
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:nil message:errMsg delegate:self cancelButtonTitle:nil otherButtonTitles:@"确认", nil];
+        [alert show];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
     }];
@@ -96,11 +105,17 @@
     params[@"UserName"]=self.registerPhoneNumber.text;
     params[@"ResCode"]=self.receiveCode.text;
     params[@"PassWord"]=self.registerPassword.text;
-    [[AFHTTPSessionManager manager] POST:@"http://bxw2442250223.my3w.com/BackStage/RegisterResult" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[AFHTTPSessionManager manager] POST:@"http://bxw2442250223.my3w.com/BackStage/RegisterResult" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
+     {
         NSLog(@"%@",responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+         NSDictionary *dict =responseObject;
+         NSString *errMsg = [dict valueForKey:@"ErrMsg"];
+         NSLog(@"%@",errMsg);
+         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:nil message:errMsg delegate:self cancelButtonTitle:nil otherButtonTitles:@"确认", nil];
+         [alert show];
+     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * error) {
         NSLog(@"%@",error);
-    }];
+        }];
 
 }
 
@@ -111,9 +126,23 @@
     params[@"UserName"]=self.registerPhoneNumber.text;
     [[AFHTTPSessionManager manager] POST:@"http://bxw2442250223.my3w.com/BackStage/GetRegisterCode" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@",responseObject);
+        NSDictionary *dict =responseObject;
+        NSString *errMsg = [dict valueForKey:@"ErrMsg"];
+        NSLog(@"%@",errMsg);
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:nil message:errMsg delegate:self cancelButtonTitle:nil otherButtonTitles:@"确认", nil];
+        [alert show];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
     }];
+}
+
+- (IBAction)close {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)forgetPassword {
+    forgetPasswordViewController *fg=[[forgetPasswordViewController alloc]init];
+    [self presentViewController:fg animated:YES completion:nil];
 }
 
 @end

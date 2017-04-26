@@ -34,6 +34,8 @@
 		C1416A5C1E98F168001802A6 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1416A581E98F168001802A6 /* MovieDetailViewController.m */; };
 		C1416A5D1E98F168001802A6 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1416A5A1E98F168001802A6 /* MovieViewController.m */; };
 		C1737B971EAB3EFB00B54F89 /* login_rgister_textfield_bg.imageset in Resources */ = {isa = PBXBuildFile; fileRef = C1737B961EAB3EFB00B54F89 /* login_rgister_textfield_bg.imageset */; };
+		C18800041EB0694500F7062D /* forgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18800021EB0694500F7062D /* forgetPasswordViewController.m */; };
+		C18800051EB0694500F7062D /* forgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18800031EB0694500F7062D /* forgetPasswordViewController.xib */; };
 		C19B72E81E8CDDAC008629AC /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = C19B72A21E8CDDAC008629AC /* Contents.json */; };
 		C19B72E91E8CDDAC008629AC /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = C19B72A41E8CDDAC008629AC /* Contents.json */; };
 		C19B72EA1E8CDDAC008629AC /* login_close_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C19B72A51E8CDDAC008629AC /* login_close_icon.png */; };
@@ -133,6 +135,9 @@
 		C1416A591E98F168001802A6 /* MovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
 		C1416A5A1E98F168001802A6 /* MovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
 		C1737B961EAB3EFB00B54F89 /* login_rgister_textfield_bg.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = login_rgister_textfield_bg.imageset; path = login_register_button.imageset/login_rgister_textfield_bg.imageset; sourceTree = "<group>"; };
+		C18800011EB0694500F7062D /* forgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = forgetPasswordViewController.h; path = ../forgetPasswordViewController.h; sourceTree = "<group>"; };
+		C18800021EB0694500F7062D /* forgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = forgetPasswordViewController.m; path = ../forgetPasswordViewController.m; sourceTree = "<group>"; };
+		C18800031EB0694500F7062D /* forgetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = forgetPasswordViewController.xib; path = ../forgetPasswordViewController.xib; sourceTree = "<group>"; };
 		C19B72A21E8CDDAC008629AC /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		C19B72A41E8CDDAC008629AC /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		C19B72A51E8CDDAC008629AC /* login_close_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_close_icon.png; sourceTree = "<group>"; };
@@ -250,6 +255,9 @@
 				C1DD0FE31E80C57200EC3E63 /* LoginRegisterViewController.h */,
 				C1DD0FE41E80C57200EC3E63 /* LoginRegisterViewController.m */,
 				C1DD0FE51E80C57200EC3E63 /* LoginRegisterViewController.xib */,
+				C18800011EB0694500F7062D /* forgetPasswordViewController.h */,
+				C18800021EB0694500F7062D /* forgetPasswordViewController.m */,
+				C18800031EB0694500F7062D /* forgetPasswordViewController.xib */,
 				3A8D95131E10FAC5001F136F /* Info.plist */,
 				3A8D950B1E10FAC5001F136F /* Main.storyboard */,
 				3A8D950E1E10FAC5001F136F /* Assets.xcassets */,
@@ -536,6 +544,7 @@
 				C19B731C1E8CDDAC008629AC /* Contents.json in Resources */,
 				C19B73191E8CDDAC008629AC /* Contents.json in Resources */,
 				C19B73111E8CDDAC008629AC /* Contents.json in Resources */,
+				C18800051EB0694500F7062D /* forgetPasswordViewController.xib in Resources */,
 				C19B73131E8CDDAC008629AC /* login_tecent_icon@2x.png in Resources */,
 				C19B730F1E8CDDAC008629AC /* login_sina_icon_click@2x.png in Resources */,
 				C1737B971EAB3EFB00B54F89 /* login_rgister_textfield_bg.imageset in Resources */,
@@ -649,6 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18800041EB0694500F7062D /* forgetPasswordViewController.m in Sources */,
 				3A7248AD1E1348BF0054F1D3 /* BookViewController.m in Sources */,
 				3A7248B01E1350500054F1D3 /* BookCell.m in Sources */,
 				3A6734C91E17B91900CD15C4 /* MyHomeViewController.m in Sources */,
